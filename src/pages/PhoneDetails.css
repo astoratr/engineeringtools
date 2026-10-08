@@ -1,0 +1,139 @@
+.pDetails_container {
+  opacity: 0.2;
+  pointer-events: none;
+}
+
+.displayNone {
+  display: none;
+}
+
+.addDetails_container {
+  position: fixed;
+  inset: 0;
+  margin: auto;
+  z-index: 200;
+  width: 200px;
+  height: fit-content;
+  padding: 15px 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 12px;
+  align-items: center;
+  border-radius: 15px;
+  background-color: white;
+  box-shadow: 0 0 15px rgba(40, 8, 219, 0.7);
+  transition: all 0.15s ease-in-out;
+  animation: opened 0.5s ease-in-out alternate forwards;
+}
+
+.addDetails_container input {
+  padding: 5px 15px;
+  border-radius: 8px 20px;
+  border: none;
+  outline-color: blue;
+  box-shadow: 0 0 8px rgba(10, 7, 209, 0.7);
+  font-size: 0.9rem;
+  width: 100%;
+}
+
+.addDetails_container button {
+  background-color: blue;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  cursor: pointer;
+  border-radius: 50px;
+  margin-left: 5px;
+}
+
+@keyframes opened {
+  from {
+    transform: scale(0);
+  }
+
+  to {
+    transform: scale(1);
+  }
+}
+
+.dialog-container {
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 18px;
+  border: 0.9px solid gray;
+  padding: 0px 6px;
+}
+
+.userDialog{
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  background-color: white;
+  margin: auto;
+  width: fit-content;
+  height: fit-content;
+  padding: 10px 15px;
+  border-radius: 10px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.7);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  transition: all 0.15s ease-in-out;
+  animation: userDiag 0.5s ease-in-out alternate;
+}
+
+.userDialog h2{
+  font-size: 1.4rem;
+}
+
+.userDialog input{
+  padding: 8px 15px;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  border: 1px solid grey;
+}
+
+.userDialog button{
+ padding: 8px 20px;
+ color: white;
+ font-weight: bold;
+ font-size: 18px;
+ border-radius: 8px;
+ transition: all 0.15s ease-in-out;
+}
+
+.userDialog button:hover{
+  opacity: 0.7;
+}
+
+button{
+  border: none;
+}
+
+.green{
+  background-color: green;
+  margin-right: 5px;
+}
+
+.red{
+  background-color: darkred;
+}
+
+@keyframes userDiag{
+  from{
+    transform: scale(0);
+  }to {
+    transform: scale(1);
+  }
+}
+/* @media (min-width: 775px) {
+  .addDetails_container{
+    top: 200px
+  }
+} */

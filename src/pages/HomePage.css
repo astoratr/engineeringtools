@@ -1,0 +1,115 @@
+.container{
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.inputfield{
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  box-shadow: -5px 0 10px rgba(0, 0, 0, 0.6);
+  border: none;
+}
+
+.user-input{
+  padding: 10px 15px;
+  border: none;
+  font-size: 18px;
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+  outline-color: blue;
+}
+
+.next{
+  background-color: blue;
+  color: white;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  margin-left: -10px;
+}
+
+.next:hover{
+  opacity: 0.7;
+}
+
+.loader{
+  border: 2.5px dashed white;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  animation: loading 2s ease-in-out alternate infinite;
+}
+
+.welcome-container{
+  border-radius: 5px;
+  overflow: hidden;
+  height: fit-content;
+  text-align: center;
+  font-weight: bold;
+  font-size: 0.8rem;
+  margin-top: 15px;
+}
+
+.welcome-container p::after{
+  content: '';
+  animation: welcoming 30s ease-out forwards;
+}
+
+@keyframes welcoming {
+  0%, 20%{
+    content: 'Creating Environment.....';
+  }20%, 40%{
+    content: 'Initializing user interface.....';
+  }40%, 60%{
+    content: 'Almost done.....';
+  }60%, 80%{
+    content: 'Done!';
+  }80%, 100%{
+    content: 'Welocme to Engineering T&P';
+  }
+}
+
+.user-welcome{
+  text-align: center;
+  line-height: 20px;
+  color: blue;
+  letter-spacing: 2px;
+  font-size: 1.5rem;
+  text-shadow: 3px 3px 8px rgba(8, 11, 212, 0.6);
+}
+
+span{
+  font-size: 0.75rem;
+}
+
+@keyframes loading {
+  from{
+    transform: rotate(0deg);
+    opacity: 0.5;
+  } to{
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 475px) {
+  .astor_img{
+    width: 320px;
+  }
+
+  .user-input{
+    font-size: 15px;
+    padding: 8px 10px;
+  }
+
+  .next{
+    padding: 5px 6px;
+  }
+}

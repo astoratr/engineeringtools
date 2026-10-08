@@ -1,0 +1,97 @@
+nav{
+  background-color: white;
+  box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.7);
+  position: fixed;
+  top: 55px;
+  left: 0;
+  bottom: 0;
+  width: 270px;
+  display: none;
+  grid-template-rows: 230px 1fr ;
+  white-space: nowrap;
+  overflow: scroll;
+  scrollbar-width: thin;
+  z-index: 200;
+  padding: 3px 6px 13px 6px;
+}
+
+.head-nav{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3px;
+}
+
+.mid1-nav{
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  padding: 10px 15px;
+  margin-bottom: 25px;
+}
+
+.mid1-nav a{
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  border: 1px solid rgb(236, 232, 232);
+  padding: 8px;
+  border-radius: 5px 15px;
+  text-decoration: none;
+  color: black;
+  font-size: 1rem;
+}
+
+.mid1-nav a:hover{
+  background-color: rgb(70, 70, 253);
+  color: white;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.6);
+}
+
+.mid1-nav a.active{
+  background-color: rgb(70, 70, 253);
+  color: white;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.6);
+}
+
+.mid1-nav img{
+  width: 28px;
+  pointer-events: none;
+}
+
+footer{
+  text-align: center;
+  color: rgb(145, 143, 143);
+}
+
+.edit_username{
+  width: 16px;
+  margin-left: 10px;
+}
+
+.logo{
+  width: 200px;
+}
+
+@media (min-width: 725px) {
+  nav{
+    display: grid;
+    top: 78.5px;
+  }
+}
+
+.menuOpened{
+  display: grid;
+  animation: openMenu 0.2s ease-in-out alternate;
+}
+
+@keyframes openMenu {
+  from{
+    width: 0;
+    opacity: 0.2;
+  } to {
+    width: 270px;
+    opacity: 1;
+  }
+}

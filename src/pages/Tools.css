@@ -1,0 +1,103 @@
+.Heading {
+  font-size: 1.2rem;
+  text-align: center;
+  line-height: 30px;
+  margin-bottom: 10px;
+}
+
+.intro {
+  color: blue;
+  margin-bottom: 8px;
+}
+
+.paragraph {
+  text-align: justify;
+  line-height: 20px;
+  font-size: 0.8rem;
+  margin-bottom: 15px;
+}
+
+.tool {
+  color: blue;
+  margin-bottom: 8px;
+}
+
+.container_for_tools {
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 25px;
+  column-gap: 20px;
+  max-width: 500px;
+  margin-bottom: 35PX;
+}
+
+.tool-container {
+  display: grid;
+  grid-template-rows: 1fr repeat(4, 40px);
+  row-gap: 8px;
+  border: 1px solid rgb(224, 222, 222);
+  border-radius: 10px;
+  align-items: center;
+  padding: 10px 15px;
+}
+
+.tool-container img {
+  width: 150px;
+}
+
+.addTool-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  justify-content: center;
+  border: 2px dashed rgb(224, 222, 222);
+  border-radius: 10px;
+  padding: 15px;
+  cursor: pointer;
+  transition: all 0.15s ease-in-out;
+}
+
+.addTool-container:hover{
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.7);
+}
+
+textarea{
+  width: 95%;
+  padding: 5px 15px;
+  border-radius: 8px 20px;
+  border: none;
+  outline-color: blue;
+  box-shadow: 0 0 8px rgba(10, 7, 209, 0.7);
+  font-size: 0.9rem;
+}
+
+@media (min-width: 725px) {
+  .Heading {
+    font-size: 1.6rem;
+  }
+
+  .paragraph {
+    font-size: 1.1rem;
+    line-height: 30px;
+  }
+
+  .intro,
+  .tool {
+    font-size: 1.4rem;
+  }
+
+  .container_for_tools{
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .tool-container img {
+    width: 220px;
+  }
+}
+
+@media (min-width: 725px) and (max-width: 1000px) {
+    .container_for_tools{
+      grid-template-columns: 1fr 1fr;
+    }
+  }
