@@ -18,7 +18,7 @@ export function Header({ docWidth, page, toggleMenu, setToggleMenu, userName, de
 
     (JSON.parse(localStorage.getItem(detailsKey)) || details).forEach((detail) => {
       if (searchInput.length >= 1) {
-        if (detail.model.toLowerCase().trim().includes(searchInput.toLowerCase().trim())) {
+        if (detail.name.toLowerCase().trim().includes(searchInput.toLowerCase().trim()) || detail.model.toLowerCase().trim().includes(searchInput.toLowerCase().trim())) {
           searchDetails.push(detail);
           setDetails(searchDetails);
         }else{
